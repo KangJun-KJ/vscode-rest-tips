@@ -1,2 +1,3 @@
-## vscode-kj-tips
+### install
+vscode 里面搜索rest-tips
 

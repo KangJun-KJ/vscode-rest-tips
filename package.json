@@ -11,13 +11,13 @@
 		"Other"
 	],
 	"bugs": {
-		"url": "https://github.com/KangJun-KJ/vscode-kj-tips/issues",
+		"url": "https://github.com/KangJun-KJ/vscode-rest-tips/issues",
 		"email": "892498546@qq.com"
 	},
-	"homepage": "https://github.com/KangJun-KJ/vscode-kj-tips/blob/master/README.md",
+	"homepage": "https://github.com/KangJun-KJ/vscode-rest-tips/blob/master/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/KangJun-KJ/vscode-kj-tips.git"
+		"url": "https://github.com/KangJun-KJ/vscode-rest-tips.git"
 	},
 	"activationEvents": [
 		"onCommand:extension.say",
