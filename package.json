@@ -1,0 +1,74 @@
+{
+	"name": "zyf",
+	"displayName": "rest-tips",
+	"description": "remind you rest",
+	"publisher": "rest-tips",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"bugs": {
+		"url": "https://github.com/KangJun-KJ/vscode-kj-tips/issues",
+		"email": "892498546@qq.com"
+	},
+	"homepage": "https://github.com/KangJun-KJ/vscode-kj-tips/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KangJun-KJ/vscode-kj-tips.git"
+	},
+	"activationEvents": [
+		"onCommand:extension.say",
+		"*"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"commands": [{
+			"command": "extension.say",
+			"title": "今日诗词"
+		}],
+		"menus": {
+			"editor/context": [{
+				"command": "extension.say"
+			}]
+		},
+		"keybindings": [{
+			"command": "extension.say",
+			"key": "ctrl+f2",
+			"mac": "cmd+f2",
+			"when": "editorFocus"
+		}],
+		"configuration": {
+			"type": "object",
+			"title": "自定义参数",
+			"properties": {
+				"vscodePluginDemo.intervalTime": {
+					"type": "number",
+					"default": 60,
+					"description": "提醒的间隔时间,单位分钟"
+				},
+				"vscodePluginDemo.isShowTips": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否开始消息提醒"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"eslint": "^5.13.0",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"request": "^2.88.0"
+	}
+}
