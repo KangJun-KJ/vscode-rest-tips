@@ -25,6 +25,10 @@
 	],
 	"main": "./src/extension.js",
 	"contributes": {
+		"snippets": [{
+			"language": "javascript",
+			"path": "./snippets/js.json"
+		}],
 		"commands": [{
 			"command": "extension.say",
 			"title": "今日诗词"
@@ -44,6 +48,11 @@
 			"type": "object",
 			"title": "自定义参数",
 			"properties": {
+				"vscodePluginDemo.username":{
+					"type":"string",
+					"default":"小主人",
+					"description": "提醒时候的称呼"
+				},
 				"vscodePluginDemo.intervalTime": {
 					"type": "number",
 					"default": 60,

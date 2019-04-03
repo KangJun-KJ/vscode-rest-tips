@@ -1,0 +1,12 @@
+{
+  "for 循环": {
+    "prefix": "for",
+    "scope": "javascript,typescript",
+    "body": [
+      "for (const ${2:element} of ${0:array}){",
+      "\t$1",
+      "}"
+    ],
+    "description": "For Loop"
+  }
+}
