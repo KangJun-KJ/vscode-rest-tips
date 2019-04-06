@@ -1,15 +1,14 @@
 const vscode = require("vscode");
-
+const pic=require("./pic.js");
 const request = require("request");
-
 const url = 'https://api.gushi.ci/all.json';
 let timer = null;
 
 
 function activate(context) {
   var panel = null;
-
   function showWebview() {
+    const imagePath = pic[~~(Math.random()*3)];
     let username = vscode.workspace.getConfiguration().get("vscodePluginDemo.username");
     if (panel) {
       panel.reveal();
@@ -34,6 +33,7 @@ function activate(context) {
                 <h3 >抬抬头</h3>
                 <h3 >眨眨眼</h3>
                 <h3 >起来伸个懒腰</h3>
+                <img style='position:absolute;top:0px;right:0px;' src="${imagePath}">
 
             </div>
         </body>
@@ -76,6 +76,12 @@ function activate(context) {
         console.log(data);
         vscode.window.showInformationMessage(`${data.content}    --${data.origin}`);
       })
+    })
+  )
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("extension.rest", function () {
+      showWebview();
     })
   )
 
