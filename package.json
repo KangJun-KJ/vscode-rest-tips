@@ -3,7 +3,7 @@
 	"displayName": "rest-tips",
 	"description": "remind you rest",
 	"publisher": "rest-tips",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -25,40 +25,22 @@
 	],
 	"main": "./src/extension.js",
 	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/js.json"
-			}
-		],
-		"commands": [
-			{
-				"command": "extension.say",
-				"title": "今日诗词"
-			},
-			{
-				"command": "extension.rest",
-				"title": "休息一下"
-			}
-		],
+		"snippets": [{
+			"language": "javascript",
+			"path": "./snippets/js.json"
+		}],
+		"commands": [{
+			"command": "extension.rest",
+			"title": "休息一下"
+		}],
 		"menus": {
 			"editor/context": [
-				{
-					"command": "extension.say"
-				},
 				{
 					"command": "extension.rest"
 				}
 			]
 		},
-		"keybindings": [
-			{
-				"command": "extension.say",
-				"key": "ctrl+f2",
-				"mac": "cmd+f2",
-				"when": "editorFocus"
-			}
-		],
+		"keybindings": [],
 		"configuration": {
 			"type": "object",
 			"title": "自定义参数",

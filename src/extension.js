@@ -66,18 +66,18 @@ function activate(context) {
 
   start();
 
-  context.subscriptions.push(
-    vscode.commands.registerCommand("extension.say", function () {
-      request({
-        url
-      }, (error, response, body) => {
+  // context.subscriptions.push(
+  //   vscode.commands.registerCommand("extension.say", function () {
+  //     request({
+  //       url
+  //     }, (error, response, body) => {
 
-        let data = JSON.parse(response.body);
-        console.log(data);
-        vscode.window.showInformationMessage(`${data.content}    --${data.origin}`);
-      })
-    })
-  )
+  //       let data = JSON.parse(response.body);
+  //       console.log(data);
+  //       vscode.window.showInformationMessage(`${data.content}    --${data.origin}`);
+  //     })
+  //   })
+  // )
 
   context.subscriptions.push(
     vscode.commands.registerCommand("extension.rest", function () {
