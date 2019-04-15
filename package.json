@@ -3,7 +3,7 @@
 	"displayName": "rest-tips",
 	"description": "remind you rest",
 	"publisher": "rest-tips",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -23,7 +23,7 @@
 		"onCommand:extension.say",
 		"*"
 	],
-	"main": "./src/extension.js",
+	"main": "./out/extension",
 	"contributes": {
 		"snippets": [{
 			"language": "javascript",
@@ -34,11 +34,9 @@
 			"title": "休息一下"
 		}],
 		"menus": {
-			"editor/context": [
-				{
-					"command": "extension.rest"
-				}
-			]
+			"editor/context": [{
+				"command": "extension.rest"
+			}]
 		},
 		"keybindings": [],
 		"configuration": {
@@ -73,8 +71,5 @@
 		"eslint": "^5.13.0",
 		"typescript": "^3.3.1",
 		"vscode": "^1.1.28"
-	},
-	"dependencies": {
-		"request": "^2.88.0"
 	}
 }
